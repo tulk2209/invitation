@@ -1,0 +1,88 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Auto Certificate</title>
+        <meta name="description" content="Auto Certificate">
+        <meta name="author" content="SitePoint">
+
+        <meta property="og:title" content="Auto Certificate">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://abc.com">
+        <meta property="og:description" content="An auto tool certificate generator">
+        <meta property="og:image" content="image.png">
+
+        <link rel="stylesheet" href="styles.css">
+        <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Dancing Script'>
+        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Inter" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <script src="scripts.js"></script>
+    </head>
+
+    <body onload="onPageLoad()">
+        <!-- <header>
+            <div class="topnav" id="myTopnav">
+                <a href="#home" class="active">Home</a>
+                <a href="#login">Admin</a>
+                <a href="#login">Login</a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                  <i class="fa fa-bars"></i>
+                </a>
+              </div>
+        </header> -->
+        <main>
+            <div class="container">
+                <div class="input-row justify-center">
+                    <div class="row-name flex">
+                        <input class="full_name" id="id_input_name" type="text" id="fname" name="fname" placeholder="Nhập tên..." value="Tăng Nương" onkeyup="updateCeritifcate()" autofocus>
+                        <input type="file" id="id_file_up" accept="image/*" onchange="onInputFileChange()" hidden>
+                        <label class="upload_btn" for="id_file_up" id="id_upload"><i class="fa fa-cloud-upload" aria-hidden="true"></i>&nbsp;Upload avatar</label>
+                    </div>
+                </div>
+                <div class="canvas-area">
+                    <div class="flex canvas-row justify-center">
+                        <div class="left flex flex-column justify-center align-center">
+                            <input type="range" min="1" max="100" step="1" value="50" class="vertical_silder" id="id_zoom" oninput="updateCeritifcate()" onchange="updateCeritifcate()">
+                            <label for="id_zoom" id="label-zoom"><i class="fa fa-search-plus" aria-hidden="true"></i>&nbsp;Zoom</label>
+                        </div>
+                       
+                        <canvas id="id_main_canvas" width="3456" height="2078"></canvas>
+    
+                        <div class="right flex flex-column justify-center align-center">
+                            <input type="range" min="1" max="100" step="1" value="50" class="vertical_silder" id="id_height_pos" oninput="updateCeritifcate()" onchange="updateCeritifcate()">
+                            <label for="id_height_pos" id="label-height"><i class="fa fa-arrows-v" aria-hidden="true"></i>&nbsp;Chiều dọc</label>
+                        </div>
+                    </div>
+                    <div class="horizontal flex flex-column justify-center align-center">
+                        <input type="range" min="1" max="100" step="1" value="50" class="slider" id="id_width_pos" oninput="updateCeritifcate()" onchange="updateCeritifcate()">
+                        <label for="id_width_pos" id="label-width"><i class="fa fa-arrows-h" aria-hidden="true"></i>&nbsp;Chiều ngang</label>
+                    </div>
+                </div>
+                <div class="download-btn flex justify-center">
+                    <button id="id_download" hidden onclick="onDownloadClick()">Download</button>
+                    <label class="upload_btn" for="id_download" id="download"><i class="fa fa-download"></i>&nbsp;Download</label>
+                </div>
+                <img class="hidden_img" id="id_img_avatar" src="image/avatar.png" onload="updateCeritifcate()">
+                <img class="hidden_img" id="id_img_background" src="image/mega.png" onload="updateCeritifcate()">
+                <input class="hidden_img" type="range" min="1" max="100" step="1" value="50" id="id_expect_width" oninput="updateCeritifcate()" onchange="updateCeritifcate()">
+            </div>
+        </main>
+        <footer>
+            <div class="footer-area">
+                <span>Copyright &copy; 2021 TAKI Academy, designed by <a href="https://www.vietsofts.net" target="_blank">vietsofts.net</a></span>
+            </div>
+        </footer>
+    </body>
+    <script>
+        function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+        </script>
+</html>
