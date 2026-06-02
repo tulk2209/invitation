@@ -44,7 +44,7 @@ function updateCeritifcate() {
     if(imgBackground.complete)
         ctx.drawImage(  imgBackground, 0, 0, canvas.width, canvas.height); // Or at whatever offset you like
     
-    var xPos = 1500, yPos = 2500;
+    var xPos = 1000, yPos = 1000;
     ctx.textAlign = "center";
     ctx.fillStyle = "#0c40ec";
     ctx.shadowColor = "#000";
