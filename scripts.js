@@ -46,7 +46,7 @@ function updateCeritifcate() {
     
     var xPos = 1000, yPos = 1000;
     ctx.textAlign = "center";
-    ctx.fillStyle = "#0c40ec";
+    ctx.fillStyle = "#eff2ff";
     ctx.shadowColor = "#000";
     // ctx.shadowOffsetX = 3;
     // ctx.shadowOffsetY = 3;
